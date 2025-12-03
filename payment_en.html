@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options (50 SGD Lessons)</title>
+    <style>
+        body { font-family: "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fffbf7; margin: 0; padding: 0; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #d35400; }
+        .payment-option { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid #eee; text-align: left; }
+        .payment-option h2 { color: #2c3e50; border-bottom: 1px dashed #ddd; padding-bottom: 10px; margin-top: 0; font-size: 1.5rem; }
+        .qr-code { text-align: center; margin: 20px 0; }
+        .qr-code img { max-width: 250px; border: 1px solid #ccc; padding: 5px; border-radius: 4px; }
+        .btn-link { display: inline-block; background-color: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+        .btn-link:hover { background-color: #2980b9; }
+        .wise-btn { background-color: #1abc9c; }
+        .wise-btn:hover { background-color: #16a085; }
+        .alipay-note { background-color: #fcf8e3; padding: 15px; border-radius: 5px; margin-top: 10px; font-size: 0.9rem; border-left: 3px solid #f0ad4e;}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Payment Options: Chinese Lessons for English Speakers (50 SGD)</h1>
+
+    <div class="payment-option" id="trial">
+        <h2>Trial Lesson (30 mins) - SGD $10</h2>
+        <a href="https://wise.com/pay/r/CTpthQsbLgTOzik" class="btn-link wise-btn" target="_blank">Pay 10 SGD via Wise Link (Pre-filled)</a>
+        <div class="qr-code">
+            <img src="Wise_QR_10_SGD.png" alt="Wise QR Code for 10 SGD Trial Lesson" style="max-width: 150px;">
+        </div>
+    </div>
+    
+    <div class="payment-option" id="single">
+        <h2>Single Lesson (50 mins) - SGD $50</h2>
+        <a href="https://wise.com/pay/r/NyQ6aS7jeXJLhbE" class="btn-link wise-btn" target="_blank">Pay 50 SGD via Wise Link (Pre-filled)</a>
+        <div class="qr-code">
+            <img src="Wise_QR_50_SGD.png" alt="Wise QR Code for 50 SGD Lesson" style="max-width: 250px;">
+        </div>
+    </div>
+
+    <div class="payment-option">
+        <h2>Alipay (支付宝)</h2>
+        <div class="alipay-note">
+            <p><strong>IMPORTANT:</strong> Alipay requires you to **manually enter the correct amount** (e.g., $50, $240, or $450) after scanning the code.</p>
+        </div>
+        <div class="qr-code">
+            <img src="Alipay_QR_code.png" alt="Alipay QR Code" style="max-width: 250px;"> 
+        </div>
+    </div>
+
+    <a href="index.html#register" class="btn-link" style="background-color: #d35400; margin-top: 30px;">← Back to Registration</a>
+
+</div>
+
+</body>
+</html>
