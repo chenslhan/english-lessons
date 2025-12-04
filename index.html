@@ -34,6 +34,7 @@
         .container { max-width: 1000px; margin: 0 auto; }
         .text-center { text-align: center; }
         .max-w-600 { max-width: 700px; margin: 0 auto; }
+        .max-w-800 { max-width: 900px; margin: 0 auto; }
 
         /* --- HERO SECTION (The Top Banner) --- */
         .hero {
@@ -67,6 +68,26 @@
             max-width: 800px;
         }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        /* --- ROADMAP TABLE (New) --- */
+        .roadmap-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 1rem;}
+        .roadmap-table th, .roadmap-table td { padding: 1.25rem; text-align: left; border-bottom: 1px solid #e2e8f0; vertical-align: top;}
+        .roadmap-table th { background-color: #f1f5f9; font-weight: 700; color: #334155; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px;}
+        .roadmap-table tr:last-child td { border-bottom: none; }
+        .tag { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: white; margin-right: 5px; margin-bottom: 5px;}
+        .tag-travel { background-color: #10b981; }
+        .tag-biz { background-color: #3b82f6; }
+        .tag-life { background-color: #8b5cf6; }
+
+        /* Mobile Responsive Table */
+        @media (max-width: 600px) {
+            .roadmap-table, .roadmap-table thead, .roadmap-table tbody, .roadmap-table th, .roadmap-table td, .roadmap-table tr { 
+                display: block; 
+            }
+            .roadmap-table thead tr { position: absolute; top: -9999px; left: -9999px; }
+            .roadmap-table tr { border: 1px solid #e2e8f0; margin-bottom: 10px; border-radius: 8px; }
+            .roadmap-table td { border: none; border-bottom: 1px solid #eee; position: relative; padding-left: 50%; }
+        }
 
         /* --- PRICING CARDS --- */
         .pricing-grid {
@@ -175,7 +196,7 @@
             gap: 1rem;
         }
         .contact-label { font-weight: 600; color: #0f172a; min-width: 80px; }
-        .contact-value { color: #334155; overflow-wrap: break-word; }
+        .contact-value { color: #334155; overflow-wrap: break-word; font-size: 0.95rem;}
         .contact-value a { color: #3b82f6; text-decoration: underline; }
 
         /* --- ALERT BOX (Disclaimer) --- */
@@ -223,6 +244,56 @@
     </div>
 
     <div class="section section-gray">
+        <div class="container max-w-800">
+            <h2 class="text-center">Curriculum Roadmap</h2>
+            <p class="text-center" style="margin-bottom: 2rem;">
+                Whether you are learning for travel, business, or certification, I have a structured path for you.
+            </p>
+
+            <table class="roadmap-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Level</th>
+                        <th>What You Will Achieve</th>
+                        <th style="width: 20%;">Exam Target</th>
+                        <th style="width: 15%;">Est. Lessons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Beginner</strong></td>
+                        <td>
+                            <span class="tag tag-travel">Travel</span>
+                            Basic survival phrases, greetings, ordering food, taxi directions, and Pinyin mastery.
+                        </td>
+                        <td>HSK 1 - 2</td>
+                        <td><strong>10 - 20</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intermediate</strong></td>
+                        <td>
+                            <span class="tag tag-life">Life</span> <span class="tag tag-biz">Work</span>
+                            Daily conversations, simple emails, expressing opinions, and cultural etiquette.
+                        </td>
+                        <td>HSK 3 - 4</td>
+                        <td><strong>20 - 40</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advanced</strong></td>
+                        <td>
+                            <span class="tag tag-biz">Business</span>
+                            Complex discussions, news reading, business negotiations, and professional presentations.
+                        </td>
+                        <td>HSK 5 - 6</td>
+                        <td><strong>40+</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-center" style="margin-top: 1rem; color: #64748b; font-size: 0.85rem;">* Lesson counts are estimates and vary based on individual learning pace and homework completion.</p>
+        </div>
+    </div>
+
+    <div class="section">
         <div class="container">
             <h2>Select a Plan</h2>
             <div class="pricing-grid">
@@ -263,7 +334,7 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section section-gray">
         <div class="container max-w-600">
             <h2>Start Learning</h2>
             
@@ -284,13 +355,13 @@
         </div>
     </div>
 
-    <div class="section section-gray">
+    <div class="section">
         <div class="container">
             <h2>Contact Me</h2>
 
             <div class="alert-box max-w-600" style="margin: 0 auto 2rem auto;">
                 <span class="alert-title">Communication Policy</span>
-                To ensure I can provide the best service to all students, please reserve direct messages for urgent matters or specific questions related to our lessons. Thank you for your understanding.
+                To ensure I can provide the best service to all students, please reserve direct messages for urgent matters or specific questions related to our lessons. Unrelated messages will be politely ignored.
             </div>
 
             <div class="contact-grid">
