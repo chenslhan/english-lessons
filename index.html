@@ -7,17 +7,18 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        /* --- CRITICAL SCROLLING FIX: FORCES STABILITY --- */
+        html, body {
+            height: 100%; /* Ensures they occupy 100% of the viewport */
+            overflow-x: hidden; /* Prevents horizontal scrolling that often locks vertical scroll */
+        }
+        
         /* --- RESET & BASE STYLES --- */
         * { box-sizing: border-box; }
         
-        /* SCROLLING FIX: Ensures vertical scrolling is always possible */
-        html {
-            overflow-y: scroll; 
-        }
-
         body { 
             font-family: 'Open Sans', sans-serif; 
             line-height: 1.6; 
@@ -359,7 +360,7 @@
 
             <div class="alert-box max-w-600" style="margin: 0 auto 2rem auto;">
                 <span class="alert-title">Communication Policy</span>
-                To ensure I can provide the best service to all students, please reserve direct messages for urgent matters or specific questions related to our lessons. Unrelated messages will will be politely ignored.
+                To ensure I can provide the best service to all students, please reserve direct messages for urgent matters or specific questions related to our lessons. Unrelated messages will be politely ignored.
             </div>
 
             <div class="contact-grid">
@@ -397,5 +398,3 @@
 
 </body>
 </html>
-
-
