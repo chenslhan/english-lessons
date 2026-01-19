@@ -66,30 +66,4 @@ p{color:var(--muted);line-height:1.75;margin:0 0 10px}
 .badge{
   display:inline-block;
   margin-top:14px;
-  padding:8px 14px;
-  border-radius:999px;
-  background:rgba(255,255,255,0.12);
-  border:1px solid var(--border);
-  font-size:13px;
-  color:rgba(238,242,255,0.90);
-}
-.section{padding:48px 0}
-ul{padding-left:20px;color:var(--muted);line-height:1.75;margin:10px 0 0}
-.video iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:20px}
-.video img{width:100%;border-radius:20px;display:block}
-.footer{padding:44px 0;color:var(--muted);font-size:13px}
-
-/* ✅ QR Code Layout Fix */
-.qr-codes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start;
-  margin-top: 10px;
-}
-.qr-codes img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-}
+  padding:8px 14
