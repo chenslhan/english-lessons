@@ -3,11 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>付款方式</title>
+  <title>付款信息 - 英语课程</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Additional layout for the payment grid */
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .package-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+    }
+    .qr-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .qr-item {
+      background: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .qr-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .pay-button {
+      display: block;
+      margin-top: 8px;
+      padding: 8px;
+      background: var(--brand);
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .refund-policy {
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      color: #ffb3b3;
+    }
+  </style>
 </head>
 <body>
-
 <div class="nav">
   <div class="container nav-inner">
     <a class="brand" href="index.html">
@@ -28,108 +75,36 @@
 
 <section class="section">
   <div class="container">
-    <div class="card">
-
-      <h1>付款方式</h1>
-
-      <!-- 30分钟试课 -->
-      <h2>30分钟试课（Trial Lesson）</h2>
-      <p><strong>费用：</strong>SGD 10</p>
-      <div class="payment-grid">
-        <div class="payment-card">
-          <img src="wise-10.png" alt="Wise 10 SGD">
-          <span class="pay-label">Wise（10 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="paypal-10.png" alt="PayPal 10 SGD">
-          <span class="pay-label primary">PayPal（10 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="alipay-10.jpeg" alt="Alipay 10 SGD">
-          <span class="pay-label alipay">支付宝</span>
-        </div>
-      </div>
-
-      <!-- 50分钟正式课 -->
-      <h2>50分钟正式课（Single Lesson）</h2>
-      <p><strong>费用：</strong>SGD 40</p>
-      <div class="payment-grid">
-        <div class="payment-card">
-          <img src="wise-40.png" alt="Wise 40 SGD">
-          <span class="pay-label">Wise（40 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="paypal-40.png" alt="PayPal 40 SGD">
-          <span class="pay-label primary">PayPal（40 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="alipay-40.jpeg" alt="Alipay 40 SGD">
-          <span class="pay-label alipay">支付宝</span>
+    <h1>付款信息</h1>
+    
+    <div class="payment-grid">
+      <div class="package-card">
+        <h2>套餐 B — 10 节课 ⭐</h2>
+        <p>费用：SGD 390</p>
+        <div class="qr-container">
+          <div class="qr-item">
+            <img src="wise-390.png" alt="Wise QR">
+            <a href="https://wise.com/pay/r/2AcEZ87mfF8oC4M" class="pay-button" target="_blank">Wise</a>
+          </div>
+          <div class="qr-item">
+            <img src="paypal-390.png" alt="PayPal QR">
+            <a href="https://www.paypal.com/ncp/payment/4RKCTJJCQUVGU" class="pay-button" target="_blank">PayPal</a>
+          </div>
+          <div class="qr-item">
+            <img src="alipay-390.jpg" alt="Alipay QR">
+            <span class="pay-button" style="background:#00a3ee">支付宝</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- 套餐 A -->
-      <h2>套餐 A — 5 节课</h2>
-      <p><strong>费用：</strong>SGD 195</p>
-      <div class="payment-grid">
-        <div class="payment-card">
-          <img src="wise-195.png" alt="Wise 195 SGD">
-          <span class="pay-label">Wise（195 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="paypal-195.png" alt="PayPal 195 SGD">
-          <span class="pay-label primary">PayPal（195 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="alipay-195.jpeg" alt="Alipay 195 SGD">
-          <span class="pay-label alipay">支付宝</span>
-        </div>
-      </div>
-
-      <!-- 套餐 B -->
-      <h2>套餐 B — 10 节课 ⭐</h2>
-      <p><strong>费用：</strong>SGD 350</p>
-      <div class="payment-grid">
-        <div class="payment-card">
-          <img src="wise-350.png" alt="Wise 350 SGD">
-          <span class="pay-label">Wise（350 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="paypal-350.png" alt="PayPal 350 SGD">
-          <span class="pay-label primary">PayPal（350 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="alipay-350.jpeg" alt="Alipay 350 SGD">
-          <span class="pay-label alipay">支付宝</span>
-        </div>
-      </div>
-
-      <!-- 套餐 C -->
-      <h2>套餐 C — 20 节课</h2>
-      <p><strong>费用：</strong>SGD 770</p>
-      <div class="payment-grid">
-        <div class="payment-card">
-          <img src="wise-770.png" alt="Wise 770 SGD">
-          <span class="pay-label">Wise（770 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="paypal-770.png" alt="PayPal 770 SGD">
-          <span class="pay-label primary">PayPal（770 SGD）</span>
-        </div>
-        <div class="payment-card">
-          <img src="alipay-770.jpeg" alt="Alipay 770 SGD">
-          <span class="pay-label alipay">支付宝</span>
-        </div>
-      </div>
-
-      <!-- Refund -->
-      <h2 class="refund-title">退款政策</h2>
-      <ul class="refund">
+    <div class="refund-policy">
+      <h3>退款政策</h3>
+      <ul>
         <li>课程一经安排，不可取消。</li>
         <li>学生缺席，课程不予补课。</li>
         <li>教师缺席，将安排补课或退款。</li>
       </ul>
-
     </div>
   </div>
 </section>
@@ -137,6 +112,5 @@
 <div class="footer">
   <div class="container">© Si Han Chen</div>
 </div>
-
 </body>
 </html>
