@@ -8,8 +8,9 @@
   --brand:#7c5cff;
   --accent:#22c55e;
 }
+
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
 body{
   margin:0;
   font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
@@ -19,51 +20,109 @@ body{
     linear-gradient(180deg,var(--bg1),var(--bg2));
   color:var(--text);
 }
-a{text-decoration:none;color:inherit}
+
+a{color:inherit;text-decoration:none}
+
 .container{max-width:1120px;margin:auto;padding:0 20px}
+
+/* NAV */
 .nav{
   position:sticky;top:0;z-index:10;
   backdrop-filter:blur(10px);
-  background:rgba(11,16,32,0.86);
+  background:rgba(11,16,32,.86);
   border-bottom:1px solid var(--border);
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:18px}
-.brand{
-  display:flex;align-items:center;gap:10px;
-  font-weight:900;letter-spacing:.4px;white-space:nowrap;
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
 }
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}
 .brand-badge{
   width:32px;height:32px;border-radius:10px;
   background:linear-gradient(135deg,var(--brand),#38bdf8);
-  box-shadow:0 10px 30px rgba(124,92,255,.25);
 }
-.nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px 14px}
+.nav-links{display:flex;flex-wrap:wrap;gap:10px 14px}
 .nav-links a{font-size:14px;color:var(--muted);padding:6px 8px;border-radius:999px}
-.nav-links a:hover{color:var(--text);background:rgba(255,255,255,0.08)}
-.hero{padding:70px 0}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding:44px 0}}
+.nav-links a:hover{background:rgba(255,255,255,.08);color:var(--text)}
+
+/* CARD */
+.section{padding:60px 0}
 .card{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:24px;
-  padding:28px;
-  box-shadow:0 18px 60px rgba(0,0,0,0.35);
+  padding:32px;
+  box-shadow:0 18px 60px rgba(0,0,0,.35);
 }
-h1{font-size:42px;line-height:1.15;margin:0 0 12px}
-h2{margin:0 0 10px;font-size:22px}
-p{color:var(--muted);line-height:1.75;margin:0 0 10px}
+
+h1{font-size:40px;margin-bottom:20px}
+h2{font-size:22px;margin:30px 0 8px}
+p{color:var(--muted);margin-bottom:10px}
+
+/* PAYMENT GRID */
+.payment-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+  margin:20px 0 36px;
+}
+
+.payment-card{
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+}
+
+.payment-card img{
+  width:100%;
+  max-width:180px;
+  background:#fff;
+  padding:10px;
+  border-radius:12px;
+}
+
+/* BUTTONS */
 .btn{
   display:inline-block;
-  padding:14px 20px;
+  width:100%;
+  margin-top:14px;
+  padding:14px 18px;
   border-radius:16px;
   font-weight:800;
-  margin:8px 10px 0 0;
+  text-align:center;
 }
-.btn-primary{background:linear-gradient(135deg,var(--brand),#38bdf8)}
-.btn-secondary{background:rgba(255,255,255,0.10);border:1px solid var(--border)}
-.btn-green{background:linear-gradient(135deg,var(--accent),#16a34a)}
+.btn-primary{
+  background:linear-gradient(135deg,var(--brand),#38bdf8);
+}
+.btn-secondary{
+  background:rgba(255,255,255,.10);
+  border:1px solid var(--border);
+}
+
+/* BADGE */
 .badge{
   display:inline-block;
   margin-top:14px;
-  padding:8px 14
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:700;
+  background:#1677ff;
+  color:#fff;
+}
+
+/* REFUND */
+.refund-title{color:#e74c3c}
+.refund{color:#e74c3c;line-height:1.8}
+
+/* FOOTER */
+.footer{
+  border-top:1px solid var(--border);
+  padding:18px 0;
+  margin-top:40px;
+  text-align:center;
+  color:var(--muted);
+}
